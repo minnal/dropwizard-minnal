@@ -1,7 +1,7 @@
 dropwizard-minnal
 =================
 
-A Dropwizard bundle that enhances the entity classes using Minnal instrumentation module and auto generates the REST APIs.
+A Dropwizard bundle that enhances the entity classes using [Minnal](https://github.com/minnal/minnal) instrumentation module and auto generates the REST APIs.
 
 
 Getting Started
