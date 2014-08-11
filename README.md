@@ -25,15 +25,13 @@ Include the following maven dependencies in your dropwizard application,
       <url>https://raw.github.com/ActiveJpa/activejpa/mvn-repo/releases</url>
     </repository>
     <repository>
-      <id>autopojo-repo</id>
-      <url>https://raw.github.com/minnal/mvn-repo/master/releases</url>
-    </repository>
-    <repository>
       <id>minnal-repo</id>
       <url>https://raw.github.com/minnal/mvn-repo/master/releases</url>
     </repository>
   </repositories>
 ```
+
+NOTE: This version depends on the [dropwizard branch](https://github.com/saadmufti/dropwizard/tree/jersey-2) and [metrics branch](https://github.com/saadmufti/metrics/tree/jersey2-upgrade)
 
 ### Adding the bundle to your application
 
