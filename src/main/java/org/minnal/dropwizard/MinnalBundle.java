@@ -10,7 +10,8 @@ import io.dropwizard.setup.Environment;
 import org.activejpa.enhancer.ActiveJpaAgentLoader;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.minnal.instrument.ApplicationEnhancer;
-import org.minnal.instrument.DefaultNamingStrategy;
+import org.minnal.instrument.NamingStrategy;
+import org.minnal.instrument.UnderscoreNamingStrategy;
 import org.minnal.instrument.filter.ResponseTransformationFilter;
 import org.minnal.instrument.util.MinnalModule;
 
@@ -24,11 +25,22 @@ public class MinnalBundle implements Bundle {
 	
 	private String[] packagesToScan;
 	
+	private NamingStrategy namingStrategy;
+	
+	/**
+	 * @param packagesToScan
+	 * @param namingStrategy
+	 */
+	public MinnalBundle(String[] packagesToScan, NamingStrategy namingStrategy) {
+		this.packagesToScan = packagesToScan;
+		this.namingStrategy = namingStrategy;
+	}
+
 	/**
 	 * @param packagesToScan
 	 */
 	public MinnalBundle(String[] packagesToScan) {
-		this.packagesToScan = packagesToScan;
+		this(packagesToScan, new UnderscoreNamingStrategy());
 	}
 
 	public void initialize(Bootstrap<?> bootstrap) {
@@ -47,7 +59,7 @@ public class MinnalBundle implements Bundle {
 	}
 	
 	protected ApplicationEnhancer createApplicationEnhancer(Environment environment) {
-		return new DropwizardApplicationEnhancer(environment, packagesToScan, new DefaultNamingStrategy());
+		return new DropwizardApplicationEnhancer(environment, packagesToScan, namingStrategy);
 	}
 
 }
