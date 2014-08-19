@@ -15,7 +15,7 @@ Include the following maven dependencies in your dropwizard application,
      <dependency>
   		<groupId>org.minnal</groupId>
   		<artifactId>dropwizard-minnal</artifactId>
-  		<version>0.0.1</version>
+  		<version>0.0.2</version>
   	</dependency>
    </dependencies>
    
