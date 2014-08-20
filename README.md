@@ -15,7 +15,7 @@ Include the following maven dependencies in your dropwizard application,
      <dependency>
   		<groupId>org.minnal</groupId>
   		<artifactId>dropwizard-minnal</artifactId>
-  		<version>0.0.1</version>
+  		<version>0.0.2</version>
   	</dependency>
    </dependencies>
    
@@ -31,7 +31,7 @@ Include the following maven dependencies in your dropwizard application,
   </repositories>
 ```
 
-NOTE: This version depends on the [dropwizard branch](https://github.com/saadmufti/dropwizard/tree/jersey-2) and [metrics branch](https://github.com/saadmufti/metrics/tree/jersey2-upgrade)
+NOTE: This version depends on the [dropwizard branch](https://github.com/saadmufti/dropwizard/tree/jersey-2) and [metrics branch](https://github.com/saadmufti/metrics/tree/jersey2-upgrade). You will have to build the snapshot versions from these repos locally to use this module.
 
 ### Adding the bundle to your application
 
