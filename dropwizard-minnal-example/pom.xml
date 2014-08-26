@@ -4,14 +4,14 @@
 	<parent>
 		<groupId>org.minnal</groupId>
 		<artifactId>dropwizard-minnal</artifactId>
-		<version>0.0.2-SNAPSHOT</version>
+		<version>0.0.3-SNAPSHOT</version>
 	</parent>
 	<artifactId>dropwizard-minnal-example</artifactId>
 	<dependencies>
 		<dependency>
 			<groupId>org.minnal</groupId>
 			<artifactId>dropwizard-minnal-core</artifactId>
-			<version>0.0.2-SNAPSHOT</version>
+			<version>0.0.3-SNAPSHOT</version>
 			<exclusions>
 				<exclusion>
 					<artifactId>log4j-over-slf4j</artifactId>
@@ -22,7 +22,7 @@
 		<dependency>
 			<groupId>org.minnal</groupId>
 			<artifactId>dropwizard-minnal-test</artifactId>
-			<version>0.0.2-SNAPSHOT</version>
+			<version>0.0.3-SNAPSHOT</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
