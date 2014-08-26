@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.minnal</groupId>
 		<artifactId>dropwizard-minnal</artifactId>
-		<version>0.0.3-SNAPSHOT</version>
+		<version>0.0.5-SNAPSHOT</version>
 	</parent>
 	<artifactId>dropwizard-minnal-example</artifactId>
 	<dependencies>
