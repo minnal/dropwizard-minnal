@@ -15,6 +15,8 @@ import org.minnal.instrument.UnderscoreNamingStrategy;
 import org.minnal.instrument.filter.ResponseTransformationFilter;
 import org.minnal.instrument.util.MinnalModule;
 
+import com.google.common.collect.Lists;
+
 /**
  * Minnal bundle that instruments all the entities defined to auto generate APIs
  * 
@@ -53,7 +55,7 @@ public class MinnalBundle implements Bundle {
 
 	public void run(Environment environment) {
 		ResourceConfig config = environment.jersey().getResourceConfig();
-		config.register(ResponseTransformationFilter.class);
+		config.register(new ResponseTransformationFilter(Lists.<String>newArrayList(), new UnderscoreNamingStrategy()));
 		environment.getObjectMapper().registerModule(new MinnalModule());
 		createApplicationEnhancer(environment).enhance();
 	}

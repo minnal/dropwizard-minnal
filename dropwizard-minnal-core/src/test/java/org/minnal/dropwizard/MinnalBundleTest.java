@@ -58,7 +58,7 @@ public class MinnalBundleTest {
 		DropwizardApplicationEnhancer enhancer = mock(DropwizardApplicationEnhancer.class);
 		doReturn(enhancer).when(bundle).createApplicationEnhancer(environment);
 		bundle.run(environment);
-		verify(config).register(ResponseTransformationFilter.class);
+		verify(config).register(any(ResponseTransformationFilter.class));
 		verify(mapper).registerModule(any(MinnalModule.class));
 		verify(enhancer).enhance();
 	}
